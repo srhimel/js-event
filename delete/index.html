@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Document</title>
+</head>
+
+<body>
+    <h1>More Event</h1>
+    <section>
+        <h3 id="importantTxt">Very important Secret Information</h3>
+        <input type="text" placeholder="Type delete to proceed" id="deleteInput">
+        <input type="button" value="Delete" disabled id="deleteBtn">
+    </section>
+    <script>
+        document.getElementById('deleteInput').addEventListener('keyup', function (event) {
+            const deleteBtn = document.getElementById('deleteBtn');
+            if (event.target.value == 'delete') {
+                deleteBtn.removeAttribute('disabled');
+            }
+            else {
+                deleteBtn.setAttribute('disabled', 'true');
+            }
+            deleteBtn.addEventListener('click', function () {
+                document.getElementById('importantTxt').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Delegate </h1>
+        <ul id="bubbleList">
+            <li class="list">Lorem, ipsum.</li>
+            <li class="list">Deserunt, neque!</li>
+            <li class="list" id="special">Officiis, rerum.</li>
+            <li class="list">Alias, sequi.</li>
+            <li class="list">Deleniti, vitae.</li>
+            <li class="list">Laudantium, quibusdam!</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('bubbleList').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target);
+        });
+    </script>
+</body>
+
+</html>
